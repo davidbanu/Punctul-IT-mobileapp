@@ -40,9 +40,6 @@ const App: () => React$Node = () => {
                   <Stack.Screen name="ParolaSchimbata" component={ParolaSchimbata} />
             </Stack.Navigator>
         </NavigationContainer>
-
-
-
   );
 };
 
