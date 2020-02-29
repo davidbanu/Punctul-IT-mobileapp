@@ -38,7 +38,7 @@ const App: () => React$Node = () => {
 //                  <Stack.Screen name="TrimiteEmail" component={TrimiteEmail} />
 //            </Stack.Navigator>
 //        </NavigationContainer>
-          <Login />
+          <ResetPassword />
 
 
   );
