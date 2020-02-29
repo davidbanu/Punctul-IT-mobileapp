@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
+import ParolaSchimbata from '../containers/ParolaSchimbata';
+
 
 
 export default class LoginForm extends Component {
-
 
     render() {
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content" />
-                <TextInput 
+                <TextInput
                 placeholder="Email"
                 placeholderTextColor="#FFF"
                 returnKeyType="next"
@@ -18,13 +21,14 @@ export default class LoginForm extends Component {
                 keyboardType="email-address"
 
                 style={styles.input} />
-                <TextInput 
+                <TextInput
                 placeholder="Parolă"
                 placeholderTextColor="#FFF"
                 secureTextEntry
                 returnKeyType="go"
                 style={styles.input} />
-                <TouchableOpacity>
+                <TouchableOpacity title={`Go to ${ParolaSchimbata}`}
+                                        onPress={() => navigation.navigate(ParolaSchimbata)}>
                     <Text style={styles.parolaUitata}
                      onPress={() => navigation.navigate('TrimiteEmail', {name: 'TrimiteEmail'})} >
                      Ai uitat parola ?

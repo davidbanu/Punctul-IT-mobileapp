@@ -1,18 +1,15 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, KeyboardAvoidingView, AppRegistry} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import LoginForm from '../components/LoginForm';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 
-export default class Login extends Component {
+
+import ParolaSchimbataForm from '../components/ParolaSchimbataForm';
+
+export default class ParolaSchimbata extends Component {
 render() {
     return (
     <KeyboardAvoidingView style={styles.container}>
-        <View style={styles.logoContainer}>
-            <Image style={styles.logo} source={require('../assets/logo.png')}/>
-        </View>
         <View style={styles.formContainer}>
-        <LoginForm />
+        <ParolaSchimbataForm />
         </View>
     </KeyboardAvoidingView>
     )
@@ -37,5 +34,3 @@ const styles = StyleSheet.create({
     }
 
 });
-
-AppRegistry.registerComponent("Login", () => Stack);

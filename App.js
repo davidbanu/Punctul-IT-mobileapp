@@ -17,6 +17,7 @@ import Login from './src/containers/Login';
 import SignUp from './src/containers/SignUp';
 import TrimiteEmail from './src/containers/TrimiteEmail';
 import ResetPassword from './src/containers/ResetPassword';
+import ParolaSchimbata from './src/containers/ParolaSchimbata';
 
 import {
   Header,
@@ -30,15 +31,16 @@ const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
-//        <NavigationContainer>
-//            <Stack.Navigator screenOptions={{headerShown: false}}>
-//                  <Stack.Screen name="ResetPassword" component={ResetPassword} />
-//                  <Stack.Screen name="Login" component={Login} />
-//                  <Stack.Screen name="SignUp" component={SignUp} />
-//                  <Stack.Screen name="TrimiteEmail" component={TrimiteEmail} />
-//            </Stack.Navigator>
-//        </NavigationContainer>
-          <ResetPassword />
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
+                  <Stack.Screen name="Login" component={Login} />
+                  <Stack.Screen name="SignUp" component={SignUp} />
+                  <Stack.Screen name="TrimiteEmail" component={TrimiteEmail} />
+                  <Stack.Screen name="ResetPassword" component={ResetPassword} />
+                  <Stack.Screen name="ParolaSchimbata" component={ParolaSchimbata} />
+            </Stack.Navigator>
+        </NavigationContainer>
+
 
 
   );
