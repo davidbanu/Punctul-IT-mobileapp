@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Image} from 'react-native';
+import userData from '../assets/exampleUserData.json';
 
 export default class HomeComponent extends Component {
     render() {
             return (
                 <View style={styles.container}>
                     <StatusBar barStyle="light-content" />
-                    <Text style={styles.title}>Bună, David!</Text>
+                    <Text style={styles.title}>Bună, {userData.username}!</Text>
                     <View style={styles.avatarContainer}> 
                         <Image style={styles.avatar} source={require('../assets/avatar.jpg')}/>
                     </View>
