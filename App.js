@@ -1,7 +1,11 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { Component } from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createStackNavigator} from '@react-navigation/stack';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+
 
 import {
   SafeAreaView,
@@ -11,6 +15,7 @@ import {
   Dimensions,
   Image as ReactImage,
   StatusBar,
+  AppRegistry
 } from 'react-native';
 
 import Login from './src/containers/Login';
@@ -18,29 +23,40 @@ import SignUp from './src/containers/SignUp';
 import TrimiteEmail from './src/containers/TrimiteEmail';
 import ResetPassword from './src/containers/ResetPassword';
 import ParolaSchimbata from './src/containers/ParolaSchimbata';
+import Home from './src/containers/Home';
 
 import {
   Header,
-  LearnMoreLinks,
-  Colors,
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native';
 
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
+const MaterialBottomTabs = createMaterialBottomTabNavigator();
+const MaterialTopTabs = createMaterialTopTabNavigator();
 
-const App: () => React$Node = () => {
-  return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
-                  <Stack.Screen name="Login" component={Login} />
-                  <Stack.Screen name="SignUp" component={SignUp} />
-                  <Stack.Screen name="TrimiteEmail" component={TrimiteEmail} />
-                  <Stack.Screen name="ResetPassword" component={ResetPassword} />
-                  <Stack.Screen name="ParolaSchimbata" component={ParolaSchimbata} />
-            </Stack.Navigator>
-        </NavigationContainer>
-  );
-};
+export default class App extends Component {
+  render() {
 
-export default App;
+    createHomeStack = () =>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Login" component={Login}  />
+      <Stack.Screen name="ResetPassword" component={ResetPassword} />
+      <Stack.Screen name="ParolaSchimbata" component={ParolaSchimbata} />
+    </Stack.Navigator>
+
+    return (
+      <NavigationContainer>
+          <Drawer.Navigator>
+              <Drawer.Screen name="Login" children={createHomeStack} />
+              <Drawer.Screen name="Signup" component={SignUp} />
+              <Drawer.Screen name="Reset Password" component={ResetPassword} />
+              <Drawer.Screen name="Trimite Email" component={TrimiteEmail} />
+              <Drawer.Screen name="Parola Schimbata" component={ParolaSchimbata} />
+              <Drawer.Screen name="Home"  component={Home} /> 
+          </Drawer.Navigator>
+      </NavigationContainer>
+    );
+  }
+}

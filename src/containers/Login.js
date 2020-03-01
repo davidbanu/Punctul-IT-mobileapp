@@ -4,21 +4,18 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoginForm from '../components/LoginForm';
 
-export default class Login extends Component {
-render() {
-    return (
-    <KeyboardAvoidingView style={styles.container}>
-        <View style={styles.logoContainer}>
-            <Image style={styles.logo} source={require('../assets/logo.png')}/>
-        </View>
-        <View style={styles.formContainer}>
-        <LoginForm />
-        </View>
-    </KeyboardAvoidingView>
-    )
-}
 
-}
+const Login = () => (
+        <KeyboardAvoidingView style={styles.container}>
+            <View style={styles.logoContainer}>
+                <Image style={styles.logo} source={require('../assets/logo.png')}/>
+            </View>
+            <View style={styles.formContainer}>
+            <LoginForm/>
+            </View>
+        </KeyboardAvoidingView>
+
+);
 
 const styles = StyleSheet.create({
     container: {
@@ -38,4 +35,4 @@ const styles = StyleSheet.create({
 
 });
 
-AppRegistry.registerComponent("Login", () => Stack);
+export default Login;

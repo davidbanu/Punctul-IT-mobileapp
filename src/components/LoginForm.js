@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-
-import ParolaSchimbata from '../containers/ParolaSchimbata';
+import { NavigationContainer } from '@react-navigation/native';
 
 
-
-export default class LoginForm extends Component {
-
-    render() {
-        return (
-            <View style={styles.container}>
+const LoginForm = ({navigation}) => (
+<View style={styles.container}>
                 <StatusBar barStyle="light-content" />
                 <TextInput
                 placeholder="Email"
@@ -19,7 +13,6 @@ export default class LoginForm extends Component {
                 autoCapitalize="none"
                 autoCorrect={false}
                 keyboardType="email-address"
-
                 style={styles.input} />
                 <TextInput
                 placeholder="Parolă"
@@ -27,20 +20,19 @@ export default class LoginForm extends Component {
                 secureTextEntry
                 returnKeyType="go"
                 style={styles.input} />
-                <TouchableOpacity title={`Go to ${ParolaSchimbata}`}
-                                        onPress={() => navigation.navigate(ParolaSchimbata)}>
-                    <Text style={styles.parolaUitata}
-                     onPress={() => navigation.navigate('TrimiteEmail', {name: 'TrimiteEmail'})} >
+                <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')}>
+                    <Text style={styles.parolaUitata}>
                      Ai uitat parola ?
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttonContainer} 
+                onPress={() => navigation.navigate('Parola Schimbata')}>
                     <Text style={styles.buttonText}>Conectează-te</Text>
                 </TouchableOpacity>
             </View>
-        )
-    }
-}
+
+);
+
 
 const styles = StyleSheet.create({
     container: {
@@ -86,3 +78,5 @@ const styles = StyleSheet.create({
         margin: 30
     }
 })
+
+export default LoginForm;
