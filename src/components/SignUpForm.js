@@ -1,18 +1,38 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, KeyboardAvoidingView} from 'react-native';
+import { Dropdown } from 'react-native-material-dropdown';
 
 export default class SignUpForm extends Component {
     render() {
+        let data = [{
+            value: 'Manager regional',
+          }, {
+            value: 'Profesor',
+          }, {
+            value: 'Parinte',
+        },
+             {
+            value: 'Student'
+        }
+        ];
+
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content" />
+                <View style={styles.dropdownView}> 
+                    <Dropdown label="Tipul Contului" data={data} 
+                    baseColor="#FFF"
+                    fontSize={20}
+                    style={styles.accountType} />
+                </View>
+                
 
                 <TextInput placeholder="Nume"
                 placeholderTextColor="#FFF"
                 returnKeyType="next"
                 autoCapitalize="none"
                 autoCorrect={false}
-                style={styles.input} />
+                style={styles.input} />  
 
                 <TextInput
                 placeholder="Email"
@@ -29,20 +49,6 @@ export default class SignUpForm extends Component {
                 returnKeyType="next"
                 autoCapitalize="none"
                 autoCorrect={false}
-                style={styles.input} />
-
-                <TextInput
-                placeholder="Parolă"
-                placeholderTextColor="#FFF"
-                secureTextEntry
-                returnKeyType="next"
-                style={styles.input} />
-
-                <TextInput
-                placeholder="Confirmare Parolă"
-                placeholderTextColor="#FFF"
-                secureTextEntry
-                returnKeyType="go"
                 style={styles.input} />
 
 
@@ -85,5 +91,14 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         fontSize: 22,
         fontFamily: 'Roboto'
+    },
+
+    accountType: {
+        color: '#FFF',
+        fontSize: 22
+    },
+
+    dropdownView: {
+        marginBottom: 30
     }
 })

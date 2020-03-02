@@ -2,6 +2,7 @@
     "_id": "5e5bec46f7f9b5098e293d91",
     "birthDate": "07/06/1995",
     "username": "David",
+    "accountType": "Admin",
     "email": "davidbanu@ymail.com",
     "image": "../assets/avatar.jpg",
     "bio": "",
