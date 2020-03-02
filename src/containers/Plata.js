@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, KeyboardAvoidingView, View} from 'react-native';
-import PlataComponent from '../components/HomeComponent';
+import PlataComponent from '../components/PlataComponent';
 
 export default class Home extends Component {
     render () {
