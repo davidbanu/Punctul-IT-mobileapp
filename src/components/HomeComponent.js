@@ -13,7 +13,7 @@ function HomeComponent() {
                 <Image style={styles.avatar} source={require('../assets/avatar.jpg')}/>
             </View>
             <TouchableOpacity style={styles.buttonContainer}
-            onPress={() => navigation.navigate('Login')}>
+            onPress={() => navigation.navigate('Catalog')}>
                 <Text style={styles.buttonText}>Catalog</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}
