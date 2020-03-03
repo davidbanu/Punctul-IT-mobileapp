@@ -14,7 +14,7 @@ export default class SignUp extends Component {
                 keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
              style={styles.container}>
                 <View>
-                    <Text style={styles.header}> Creează Cont </Text>
+                    <Text style={styles.header} > Creează Cont </Text>
                     <View style={styles.formContainer}>
                         <SignUpForm />
                     </View>

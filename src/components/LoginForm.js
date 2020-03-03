@@ -1,37 +1,42 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 
-const LoginForm = ({navigation}) => (
-<View style={styles.container}>
-                <StatusBar barStyle="light-content" />
-                <TextInput
-                placeholder="Email"
-                placeholderTextColor="#FFF"
-                returnKeyType="next"
-                autoCapitalize="none"
-                autoCorrect={false}
-                keyboardType="email-address"
-                style={styles.input} />
-                <TextInput
-                placeholder="Parolă"
-                placeholderTextColor="#FFF"
-                secureTextEntry
-                returnKeyType="go"
-                style={styles.input} />
-                <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')}>
-                    <Text style={styles.parolaUitata}>
-                     Ai uitat parola ?
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonContainer} 
-                onPress={() => navigation.navigate('Parola Schimbata')}>
-                    <Text style={styles.buttonText}>Conectează-te</Text>
-                </TouchableOpacity>
-            </View>
 
-);
+function LoginForm () {
+    const navigation = useNavigation();
+    return (
+    <View style={styles.container}>
+                    <StatusBar barStyle="light-content" />
+                    <TextInput
+                    placeholder="Email"
+                    placeholderTextColor="#FFF"
+                    returnKeyType="next"
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    keyboardType="email-address"
+                    style={styles.input} />
+                    <TextInput
+                    placeholder="Parolă"
+                    placeholderTextColor="#FFF"
+                    secureTextEntry
+                    returnKeyType="go"
+                    style={styles.input} />
+                    <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')}>
+                        <Text style={styles.parolaUitata}>
+                         Ai uitat parola ?
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.buttonContainer} 
+                    onPress={() => navigation.navigate('Home')}>
+                        <Text style={styles.buttonText}>Conectează-te</Text>
+                    </TouchableOpacity>
+                </View>
+    
+    );
+}
+
 
 
 const styles = StyleSheet.create({

@@ -43,7 +43,7 @@ export default class App extends Component {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Login" component={Login}  />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
-      <Stack.Screen name="ParolaSchimbata" component={ParolaSchimbata} />
+      <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
 
     return (
