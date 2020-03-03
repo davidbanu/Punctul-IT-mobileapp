@@ -26,6 +26,7 @@ import ParolaSchimbata from './src/containers/ParolaSchimbata';
 import Home from './src/containers/Home';
 import Plata from './src/containers/Plata';
 import Catalog from './src/containers/Catalog';
+import Membrii from './src/containers/Membrii';
 
 import {
   Header,
@@ -49,6 +50,7 @@ export default class App extends Component {
       <Stack.Screen name="Parola Schimbata" component={ParolaSchimbata} />
       <Stack.Screen name="Plata" component={Plata} /> 
       <Stack.Screen name="Catalog" component={Catalog} />
+      <Stack.Screen name="Membrii" component={Membrii} />
     </Stack.Navigator>
 
     return (

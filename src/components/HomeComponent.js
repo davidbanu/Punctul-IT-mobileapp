@@ -20,7 +20,8 @@ function HomeComponent() {
             onPress={() => navigation.navigate('Plata')}>
                 <Text style={styles.buttonText}>Plăți</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.buttonContainer}
+            onPress={() => navigation.navigate('Membrii')}>
                 <Text style={styles.buttonText}>Membrii</Text>
             </TouchableOpacity>
         </View>
