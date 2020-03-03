@@ -7,8 +7,7 @@ export default class PlataComponent extends Component {
             return (
                 <View style={styles.container}>
                     <StatusBar barStyle="light-content" />
-                    <Text style={styles.title}>Plăți</Text>
-                    
+                    <Text style={styles.title}>Plăți</Text>  
                 </View>
             )
      }

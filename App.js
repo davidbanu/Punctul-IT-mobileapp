@@ -24,6 +24,7 @@ import TrimiteEmail from './src/containers/TrimiteEmail';
 import ResetPassword from './src/containers/ResetPassword';
 import ParolaSchimbata from './src/containers/ParolaSchimbata';
 import Home from './src/containers/Home';
+import Plata from './src/containers/Plata';
 
 import {
   Header,
@@ -44,6 +45,8 @@ export default class App extends Component {
       <Stack.Screen name="Login" component={Login}  />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Parola Schimbata" component={ParolaSchimbata} />
+      <Stack.Screen name="Plata" component={Plata} /> 
     </Stack.Navigator>
 
     return (

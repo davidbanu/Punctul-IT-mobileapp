@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Image} from 'react-native';
+import {useNavigation} from '@react-navigation/core';
 import userData from '../assets/exampleUserData.json';
 
-export default class HomeComponent extends Component {
-    render() {
-            return (
-                <View style={styles.container}>
-                    <StatusBar barStyle="light-content" />
-                    <Text style={styles.title}>Bună, {userData.username}!</Text>
-                    <View style={styles.avatarContainer}> 
-                        <Image style={styles.avatar} source={require('../assets/avatar.jpg')}/>
-                    </View>
-                    <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.buttonText}>Catalog</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.buttonText}>Plăți</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.buttonText}>Membrii</Text>
-                    </TouchableOpacity>
-                </View>
-            )
-     }
+function HomeComponent() {
+    const navigation = useNavigation();
+    return (
+        <View style={styles.container}>
+            <StatusBar barStyle="light-content" />
+            <Text style={styles.title}>Bună, {userData.username}!</Text>
+            <View style={styles.avatarContainer}> 
+                <Image style={styles.avatar} source={require('../assets/avatar.jpg')}/>
+            </View>
+            <TouchableOpacity style={styles.buttonContainer}
+            onPress={() => navigation.navigate('Login')}>
+                <Text style={styles.buttonText}>Catalog</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer}
+            onPress={() => navigation.navigate('Plata')}>
+                <Text style={styles.buttonText}>Plăți</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer}>
+                <Text style={styles.buttonText}>Membrii</Text>
+            </TouchableOpacity>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -69,3 +71,5 @@ const styles = StyleSheet.create({
         borderRadius: 400/ 2
     }
 })
+
+export default HomeComponent;

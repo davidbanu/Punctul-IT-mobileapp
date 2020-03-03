@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, KeyboardAvoidingView} from 'react-native';
+import { useNavigation } from '@react-navigation/core';
 
-export default class ResetPasswordForm extends Component {
-    render() {
-            return (
-                <View style={styles.container}>
-                    <StatusBar barStyle="light-content" />
-                    <Text style={styles.title}>Resetează Parola</Text>
-                    <TextInput
-                     placeholder="Parolă"
-                     placeholderTextColor="#FFF"
-                     secureTextEntry
-                     returnKeyType="go"
-                     style={styles.input} />
-                    <TextInput
-                    placeholder="Confirmă Parola"
-                    placeholderTextColor="#FFF"
-                    secureTextEntry
-                    returnKeyType="go"
-                    style={styles.input} />
-
-                    <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={styles.buttonText}>Resetează</Text>
-                    </TouchableOpacity>
-                </View>
-            )
-     }
+function ResetPasswordForm () {
+    const navigation = useNavigation();
+    return (
+        <View style={styles.container}>
+            <StatusBar barStyle="light-content" />
+            <Text style={styles.title}>Resetează Parola</Text>
+            <TextInput
+             placeholder="Parolă"
+             placeholderTextColor="#FFF"
+             secureTextEntry
+             returnKeyType="go"
+             style={styles.input} />
+            <TextInput
+            placeholder="Confirmă Parola"
+            placeholderTextColor="#FFF"
+            secureTextEntry
+            returnKeyType="go"
+            style={styles.input} />
+            <TouchableOpacity style={styles.buttonContainer} 
+            onPress={() => navigation.navigate('Parola Schimbata')}>
+                <Text style={styles.buttonText}>Resetează</Text>
+            </TouchableOpacity>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -72,3 +72,5 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto'
     }
 })
+
+export default ResetPasswordForm;
