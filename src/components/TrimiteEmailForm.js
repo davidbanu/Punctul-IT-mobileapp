@@ -1,32 +1,36 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
+import {useNavigation} from '@react-navigation/core';
 
-export default class TrimiteEmailForm extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <StatusBar barStyle="light-content" />
-                <TextInput
-                placeholder="Email"
-                placeholderTextColor="#FFF"
-                returnKeyType="next"
-                autoCapitalize="none"
-                autoCorrect={false}
-                keyboardType="email-address"
-                style={styles.input} />
+function TrimiteEmailForm () {
+    const navigation = useNavigation();
 
-                <Text style={styles.textIndicatii}> Te rog introdu în câmpul de mai sus
-                      adresa ta de email, și o dată completat,
-                      vei primi un email care va conține un
-                      link de confirmare. </Text>
+    return (
+        <View style={styles.container}>
+            <StatusBar barStyle="light-content" />
+            <TextInput
+            placeholder="Email"
+            placeholderTextColor="#FFF"
+            returnKeyType="next"
+            autoCapitalize="none"
+            autoCorrect={false}
+            keyboardType="email-address"
+            style={styles.input} />
 
-                <TouchableOpacity style={styles.buttonContainer}>
-                    <Text style={styles.buttonText}>Trimite Email</Text>
-                </TouchableOpacity>
-            </View>
-        )
-    }
+            <Text style={styles.textIndicatii}> Te rog introdu în câmpul de mai sus
+                  adresa ta de email, și o dată completat,
+                  vei primi un email care va conține un
+                  link de confirmare. </Text>
+
+            <TouchableOpacity style={styles.buttonContainer}
+            onPress={()=> navigation.navigate('ResetPassword')}>
+                <Text style={styles.buttonText}>Trimite Email</Text>
+            </TouchableOpacity>
+        </View>
+    )
 }
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -68,3 +72,5 @@ const styles = StyleSheet.create({
         margin: 30
     }
 })
+
+export default TrimiteEmailForm;

@@ -23,7 +23,7 @@ function LoginForm () {
                     secureTextEntry
                     returnKeyType="go"
                     style={styles.input} />
-                    <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('TrimiteEmail')}>
                         <Text style={styles.parolaUitata}>
                          Ai uitat parola ?
                         </Text>
