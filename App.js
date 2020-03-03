@@ -46,6 +46,7 @@ export default class App extends Component {
     createHomeStack = () =>
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Login" component={Login}  />
+      <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Parola Schimbata" component={ParolaSchimbata} />
@@ -60,10 +61,9 @@ export default class App extends Component {
           <Drawer.Navigator>
               <Drawer.Screen name="Login" children={createHomeStack} />
               <Drawer.Screen name="Signup" component={SignUp} />
-              <Drawer.Screen name="Reset Password" component={ResetPassword} />
-              <Drawer.Screen name="Trimite Email" component={TrimiteEmail} />
-              <Drawer.Screen name="Parola Schimbata" component={ParolaSchimbata} />
               <Drawer.Screen name="Home"  component={Home} /> 
+              <Drawer.Screen name="Setari" component={Setari} />
+
           </Drawer.Navigator>
       </NavigationContainer>
     );
