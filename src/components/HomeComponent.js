@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
 
     title: {
         flexGrow: 1,
+        marginTop: 20,
         padding: 20,
         textAlign: 'center',
         color: '#FFF',
@@ -64,11 +65,12 @@ const styles = StyleSheet.create({
     avatarContainer: {
         alignItems: 'center',
         flexGrow: 1,
-        justifyContent: 'center'
+        justifyContent: 'center', 
+        marginBottom: 40
     },
     avatar: {
-        width: 180,
-        height: 180,
+        width: 150,
+        height: 150,
         borderRadius: 400/ 2
     }
 })

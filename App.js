@@ -27,6 +27,7 @@ import Home from './src/containers/Home';
 import Plata from './src/containers/Plata';
 import Catalog from './src/containers/Catalog';
 import Membrii from './src/containers/Membrii';
+import Setari from './src/containers/Setari';
 
 import {
   Header,
@@ -51,6 +52,7 @@ export default class App extends Component {
       <Stack.Screen name="Plata" component={Plata} /> 
       <Stack.Screen name="Catalog" component={Catalog} />
       <Stack.Screen name="Membrii" component={Membrii} />
+      <Stack.Screen name="Setari" component={Setari} />
     </Stack.Navigator>
 
     return (
