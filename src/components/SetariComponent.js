@@ -4,6 +4,7 @@ import userData from '../assets/exampleUserData.json';
 import { useNavigation } from '@react-navigation/core';
 
 
+
 function SetariComponent() {
     const navigation = useNavigation();
     return (
@@ -14,21 +15,23 @@ function SetariComponent() {
                 <Image style={styles.avatar} source={require('../assets/avatar.jpg')}/>
             </View>
             <View style={styles.innerSettingsContainer}>
-                <TouchableOpacity style={styles.element}>
-                     <Text style={styles.labels}>Generale</Text>
+                <TouchableOpacity style={styles.contulMeuLabel}>
+                     <Text style={styles.labels}>Contul Meu </Text> 
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.element}>
+                <TouchableOpacity style={styles.parolaLabel}>
                      <Text style={styles.labels}>Parolă</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.element}
+                <TouchableOpacity style={styles.signupLabel}
                 onPress={()=> navigation.navigate('SignUp')}>
-                     <Text style={styles.labels}>Creează cont</Text>
+                     <Text style={styles.labels}>Creează Cont User</Text>
                 </TouchableOpacity>
             </View>
             <TouchableOpacity style={styles.buttonContainer} 
-            onPress={() => navigation.navigate('Login')}>
+                onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.buttonText}>Ieși</Text>
             </TouchableOpacity>
+            <Text style={styles.versionNumber}>Version 0.0.5</Text>
+            
         </View>
     )
 }
@@ -37,13 +40,36 @@ const styles = StyleSheet.create({
 
     container: {
         padding: 20,
-        marginBottom: 20
+        marginBottom: 20,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 
-    element: {
-        paddingBottom: 20,
-        paddingLeft: 10, 
-        paddingTop: 10
+    contulMeuLabel: {
+        paddingBottom: 15,
+        paddingLeft: 20, 
+        paddingTop: 15,
+        borderBottomColor: '#D3D3D3',
+        borderBottomWidth: 0.5
+    },
+
+    parolaLabel: {
+        paddingBottom: 15,
+        paddingLeft: 20, 
+        paddingTop: 10,
+        borderBottomColor: '#D3D3D3',
+        borderBottomWidth: 0.5
+    },
+
+    signupLabel: {
+        paddingLeft: 20, 
+        paddingTop: 10,
+        paddingBottom: 15
+    },
+
+    icon: {
+        fontWeight: '100',
+        color: 'grey'
     },
 
     buttonContainer: {
@@ -52,10 +78,8 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderWidth: 1.2,
         borderColor: '#FFF',
-        justifyContent: 'center', 
-        alignItems: 'center',
         width: 200,
-        marginLeft: 80
+        alignContent: 'center'
 
     },
 
@@ -68,18 +92,20 @@ const styles = StyleSheet.create({
     },
 
     labels: {
-        color: 'black',
+        color: '#334856',
         fontSize: 18
     },
 
     title: {
         marginTop: 40,
-        marginLeft: 10,
+        textAlign: 'left',
         marginBottom: 10,
         fontSize: 38,
         fontWeight: '500',
         fontFamily: 'Roboto',
-        color: '#FFF'
+        color: '#FFF',
+        alignContent: 'center',
+        alignItems: 'center'
     },
 
     avatarContainer: {
@@ -96,7 +122,16 @@ const styles = StyleSheet.create({
 
     innerSettingsContainer: {
         backgroundColor: '#FFF',
-        borderRadius: 20 / 2
+        borderRadius: 20 / 2,
+        width: '100%'
+    },
+
+    versionNumber: {
+        color: '#FFF', 
+        fontSize: 16, 
+        textAlign: 'center',
+        justifyContent: 'center',
+        marginTop: 15
     }
 });
 
