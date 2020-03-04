@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, KeyboardAvoidingView, View} from 'react-native';
-import HomeComponent from '../components/HomeComponent';
+import ContulMeuComponent from '../components/ContulMeuComponent';
 
 export default class Home extends Component {
     render () {
@@ -11,7 +11,7 @@ export default class Home extends Component {
                 style={styles.container}>
                 <View style={styles.inner}>
                     <View style={styles.formContainer}>
-                        <HomeComponent />
+                        <ContulMeuComponent />
                     </View>
                 </View>
             </KeyboardAvoidingView>

@@ -15,7 +15,8 @@ function SetariComponent() {
                 <Image style={styles.avatar} source={require('../assets/avatar.jpg')}/>
             </View>
             <View style={styles.innerSettingsContainer}>
-                <TouchableOpacity style={styles.contulMeuLabel}>
+                <TouchableOpacity style={styles.contulMeuLabel}
+                onPress={()=> navigation.navigate('ContulMeu')}>
                      <Text style={styles.labels}>Contul Meu </Text> 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.parolaLabel}>
