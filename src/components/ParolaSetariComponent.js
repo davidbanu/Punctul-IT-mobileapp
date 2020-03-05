@@ -1,38 +1,40 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
+import {useNavigation} from '@react-navigation/core';
 import userData from '../assets/exampleUserData.json';
 
-export default class ParolaSetariComponent extends Component {
-    render() {
-            return (
-                <View style={styles.container}>
-                    <View style={styles.inner}>
-                        <StatusBar barStyle="light-content" />
-                        <Text style={styles.title}>Schimbă Parola</Text> 
-                        <Text style={styles.textLabel}>Parola Curentă</Text> 
-                        <TextInput
-                        secureTextEntry
-                        returnKeyType="go"
-                        style={styles.input} />
-                        <Text style={styles.textLabel}>Parola Nouă</Text>
-                        <TextInput
-                        secureTextEntry
-                        returnKeyType="go"
-                        style={styles.input} />
-                        <Text style={styles.textLabel}>Confirmă Parola Nouă</Text>
-                        <TextInput
-                        secureTextEntry
-                        returnKeyType="go"
-                        style={styles.input} />
-                        <TouchableOpacity style={styles.buttonContainer} 
-                        onPress={() => navigation.navigate('Setari')}>
-                            <Text style={styles.buttonText}>Salvează</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            )
-     }
+function  ParolaSetariComponent () {
+    const navigation = useNavigation();
+    return (
+        <View style={styles.container}>
+            <View style={styles.inner}>
+                <StatusBar barStyle="light-content" />
+                <Text style={styles.title}>Schimbă Parola</Text> 
+                <Text style={styles.textLabel}>Parola Curentă</Text> 
+                <TextInput
+                secureTextEntry
+                returnKeyType="go"
+                style={styles.input} />
+                <Text style={styles.textLabel}>Parola Nouă</Text>
+                <TextInput
+                secureTextEntry
+                returnKeyType="go"
+                style={styles.input} />
+                <Text style={styles.textLabel}>Confirmă Parola Nouă</Text>
+                <TextInput
+                secureTextEntry
+                returnKeyType="go"
+                style={styles.input} />
+                <TouchableOpacity style={styles.buttonContainer} 
+                onPress={() => navigation.navigate('Setari')}>
+                    <Text style={styles.buttonText}>Salvează</Text>
+                </TouchableOpacity>
+            </View>
+        </View>
+    )
+
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -93,3 +95,5 @@ const styles = StyleSheet.create({
         fontFamily: 'Muli-Regular'
     },
 })
+
+export default ParolaSetariComponent;
