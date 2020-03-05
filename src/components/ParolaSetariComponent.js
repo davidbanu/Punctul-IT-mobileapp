@@ -6,28 +6,29 @@ export default class ParolaSetariComponent extends Component {
     render() {
             return (
                 <View style={styles.container}>
-                    <StatusBar barStyle="light-content" />
-                    <Text style={styles.title}>Schimbă Parola</Text> 
-                    <Text style={styles.textLabel}>Parola Curentă</Text> 
-                    <TextInput
-                    secureTextEntry
-                    returnKeyType="go"
-                    style={styles.input} />
-                    <Text style={styles.textLabel}>Parola Nouă</Text>
-                    <TextInput
-                    secureTextEntry
-                    returnKeyType="go"
-                    style={styles.input} />
-                    <Text style={styles.textLabel}>Confirmă Parola Nouă</Text>
-                    <TextInput
-                    secureTextEntry
-                    returnKeyType="go"
-                    style={styles.input} />
-                    <TouchableOpacity style={styles.buttonContainer} 
-                    onPress={() => navigation.navigate('Setari')}>
-                        <Text style={styles.buttonText}>Salvează</Text>
-                    </TouchableOpacity>
-
+                    <View style={styles.inner}>
+                        <StatusBar barStyle="light-content" />
+                        <Text style={styles.title}>Schimbă Parola</Text> 
+                        <Text style={styles.textLabel}>Parola Curentă</Text> 
+                        <TextInput
+                        secureTextEntry
+                        returnKeyType="go"
+                        style={styles.input} />
+                        <Text style={styles.textLabel}>Parola Nouă</Text>
+                        <TextInput
+                        secureTextEntry
+                        returnKeyType="go"
+                        style={styles.input} />
+                        <Text style={styles.textLabel}>Confirmă Parola Nouă</Text>
+                        <TextInput
+                        secureTextEntry
+                        returnKeyType="go"
+                        style={styles.input} />
+                        <TouchableOpacity style={styles.buttonContainer} 
+                        onPress={() => navigation.navigate('Setari')}>
+                            <Text style={styles.buttonText}>Salvează</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             )
      }
@@ -36,7 +37,12 @@ export default class ParolaSetariComponent extends Component {
 const styles = StyleSheet.create({
     container: {
         padding: 20,
-        marginBottom: 20
+        marginBottom: 20,
+        flex: 1
+    },
+
+    inner: {
+        justifyContent: "flex-end",
     },
 
     buttonContainer: {
