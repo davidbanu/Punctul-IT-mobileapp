@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: '500',
         fontSize: 22,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     title: {
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         color: '#FFF',
         fontWeight: '500',
         fontSize: 32,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     }
 })
 

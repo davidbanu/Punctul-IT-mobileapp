@@ -89,12 +89,13 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: '500',
         fontSize: 22,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     labels: {
         color: '#334856',
-        fontSize: 18
+        fontSize: 18,
+        fontFamily: 'Muli-Regular'
     },
 
     title: {
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         fontSize: 38,
         fontWeight: '500',
-        fontFamily: 'Roboto',
+        fontFamily: 'Muli-Regular',
         color: '#FFF',
         alignContent: 'center',
         alignItems: 'center'

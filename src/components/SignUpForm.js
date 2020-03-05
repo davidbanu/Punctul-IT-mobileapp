@@ -5,11 +5,11 @@ import { Dropdown } from 'react-native-material-dropdown';
 export default class SignUpForm extends Component {
     render() {
         let data = [{
-            value: 'Manager regional',
+            value: 'Manager Regional',
           }, {
             value: 'Profesor',
           }, {
-            value: 'Parinte',
+            value: 'Părinte',
         },
              {
             value: 'Student'
@@ -63,19 +63,20 @@ export default class SignUpForm extends Component {
 const styles = StyleSheet.create({
     container: {
         padding: 20,
-        marginBottom: 20
+        marginBottom: 20, 
+        fontFamily: 'Muli-Regular'
     },
     input: {
         height: 40,
         marginBottom: 30,
         color: '#FFF',
-        paddingHorizontal:10,
+        paddingHorizontal: 10,
         borderRadius: 10,
         borderWidth: 1.2,
         borderColor: '#FFF',
         fontSize: 20,
         padding: 5,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
     buttonContainer: {
         marginTop: 30,
@@ -90,12 +91,13 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: '500',
         fontSize: 22,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     accountType: {
         color: '#FFF',
-        fontSize: 22
+        fontSize: 22,
+        fontFamily: 'Muli-Regular'
     },
 
     dropdownView: {

@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: '500',
         fontSize: 22,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     labels: {
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         fontSize: 38,
         fontWeight: '500',
-        fontFamily: 'Roboto',
+        fontFamily: 'Muli-Regular',
         color: '#FFF',
         alignContent: 'center',
         alignItems: 'center'
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         borderColor: '#FFF',
         fontSize: 20,
         padding: 5,
-        fontFamily: 'Roboto',
+        fontFamily: 'Muli-Regular',
         width: '100%'
     },
 });

@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         borderColor: '#FFF',
         fontSize: 20,
         padding: 5,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     buttonContainer: {
@@ -71,13 +71,13 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: '500',
         fontSize: 22,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     parolaUitata: {
         textAlign: 'center',
         color: '#FFF',
-        fontFamily:  'Roboto',
+        fontFamily: 'Muli-Regular',
         fontSize: 22,
         fontWeight: '500',
         margin: 30

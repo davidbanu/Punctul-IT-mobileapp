@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         borderColor: '#FFF',
         fontSize: 20,
         padding: 5,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
     buttonContainer: {
         borderRadius: 30,
@@ -60,13 +60,13 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: '500',
         fontSize: 22,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     textIndicatii: {
         textAlign: 'center',
         color: '#FFF',
-        fontFamily:  'Roboto',
+        fontFamily:  'Muli-Regular',
         fontWeight: '300',
         fontSize: 16,
         margin: 30

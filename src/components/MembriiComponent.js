@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         fontWeight: '500',
         fontSize: 22,
-        fontFamily: 'Roboto'
+        fontFamily: 'Muli-Regular'
     },
 
     title: {
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         marginBottom: 40,
         fontSize: 38,
         fontWeight: '500',
-        fontFamily: 'Roboto',
+        fontFamily: 'Muli-Regular',
         color: '#FFF'
     }
 })
