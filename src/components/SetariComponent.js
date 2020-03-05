@@ -20,7 +20,7 @@ function SetariComponent() {
                      <Text style={styles.labels}>Editează Profil </Text> 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.parolaLabel}>
-                     <Text style={styles.labels}>Parolă</Text>
+                     <Text style={styles.labels}>Schimbă Parola</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.signupLabel}
                 onPress={()=> navigation.navigate('SignUp')}>
@@ -31,7 +31,7 @@ function SetariComponent() {
                 onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.buttonText}>Ieși</Text>
             </TouchableOpacity>
-            <Text style={styles.versionNumber}>Version 0.0.5</Text>
+            <Text style={styles.versionNumber}>Versiunea 0.0.5</Text>
             
         </View>
     )
