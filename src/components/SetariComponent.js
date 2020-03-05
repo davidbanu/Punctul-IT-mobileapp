@@ -19,7 +19,12 @@ function SetariComponent() {
                 onPress={()=> navigation.navigate('EditeazaProfil')}>
                      <Text style={styles.labels}>Editează Profil </Text> 
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.parolaLabel}>
+                <TouchableOpacity style={styles.editeazaNotificariLabel}
+                onPress={()=> navigation.navigate('EditeazaProfil')}>
+                     <Text style={styles.labels}>Editează Notificări </Text> 
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.parolaLabel}
+                onPress={()=> navigation.navigate('ParolaSetari')}>
                      <Text style={styles.labels}>Schimbă Parola</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.signupLabel}
@@ -32,7 +37,6 @@ function SetariComponent() {
                 <Text style={styles.buttonText}>Ieși</Text>
             </TouchableOpacity>
             <Text style={styles.versionNumber}>Versiunea 0.0.5</Text>
-            
         </View>
     )
 }
@@ -50,6 +54,14 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
         paddingLeft: 20, 
         paddingTop: 15,
+        borderBottomColor: '#D3D3D3',
+        borderBottomWidth: 0.5
+    },
+
+    editeazaNotificariLabel: {
+        paddingBottom: 15,
+        paddingLeft: 20, 
+        paddingTop: 10,
         borderBottomColor: '#D3D3D3',
         borderBottomWidth: 0.5
     },
@@ -74,7 +86,7 @@ const styles = StyleSheet.create({
     },
 
     buttonContainer: {
-        marginTop: 50,
+        marginTop: 40,
         borderRadius: 30,
         paddingVertical: 10,
         borderWidth: 1.2,
@@ -99,7 +111,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: 40,
+        marginTop: 30,
         textAlign: 'left',
         marginBottom: 10,
         fontSize: 38,
@@ -114,7 +126,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexGrow: 1,
         justifyContent: 'center', 
-        marginBottom: 40
+        marginBottom: 20
     },
     avatar: {
         width: 150,

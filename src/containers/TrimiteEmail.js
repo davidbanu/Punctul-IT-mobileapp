@@ -9,9 +9,7 @@ render() {
         <View style={styles.logoContainer}>
             <Image style={styles.logo} source={require('../assets/logo.png')}/>
         </View>
-        <View style={styles.formContainer}>
         <TrimiteEmailForm />
-        </View>
     </KeyboardAvoidingView>
     )
 }
