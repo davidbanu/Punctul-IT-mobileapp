@@ -10,7 +10,7 @@ function EditeazaProfilComponent() {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="light-content" />
-            <Text style={styles.title}>Contul Meu</Text>  
+            <Text style={styles.title}>Editează Profil</Text>  
             <View style={styles.innerSettingsContainer}>
                 <TouchableOpacity style={styles.tipContLabel}>
                      <Text style={styles.labels}>Tip cont: {userData.accountType} </Text> 
