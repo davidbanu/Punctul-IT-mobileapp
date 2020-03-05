@@ -20,7 +20,7 @@ function SetariComponent() {
                      <Text style={styles.labels}>Editează Profil </Text> 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.editeazaNotificariLabel}
-                onPress={()=> navigation.navigate('EditeazaProfil')}>
+                onPress={()=> navigation.navigate('NotificariSetari')}>
                      <Text style={styles.labels}>Editează Notificări </Text> 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.parolaLabel}

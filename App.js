@@ -29,7 +29,8 @@ import Catalog from './src/containers/Catalog';
 import Membrii from './src/containers/Membrii';
 import Setari from './src/containers/Setari';
 import EditeazaProfil from './src/containers/EditeazaProfil';
-import ParolaSetari from './src/containers/ParolaSetari'
+import ParolaSetari from './src/containers/ParolaSetari';
+import NotificariSetari from './src/containers/NotificariSetari';
 
 import {
   Header,
@@ -59,6 +60,7 @@ export default class App extends Component {
       <Stack.Screen name="Setari" component={Setari} />
       <Stack.Screen name="EditeazaProfil" component={EditeazaProfil} />
       <Stack.Screen name="ParolaSetari" component={ParolaSetari} />
+      <Stack.Screen name="NotificariSetari" component={NotificariSetari} />
     </Stack.Navigator>
 
     return (
