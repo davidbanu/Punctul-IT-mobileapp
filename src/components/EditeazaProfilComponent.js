@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/core';
 
 
 
-function ContulMeuComponent() {
+function EditeazaProfilComponent() {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
@@ -119,4 +119,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ContulMeuComponent;
+export default EditeazaProfilComponent;

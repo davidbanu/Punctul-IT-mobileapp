@@ -28,7 +28,7 @@ import Plata from './src/containers/Plata';
 import Catalog from './src/containers/Catalog';
 import Membrii from './src/containers/Membrii';
 import Setari from './src/containers/Setari';
-import ContulMeu from './src/containers/ContulMeu';
+import EditeazaProfil from './src/containers/EditeazaProfil';
 
 import {
   Header,
@@ -56,7 +56,7 @@ export default class App extends Component {
       <Stack.Screen name="Catalog" component={Catalog} />
       <Stack.Screen name="Membrii" component={Membrii} />
       <Stack.Screen name="Setari" component={Setari} />
-      <Stack.Screen name="ContulMeu" component={ContulMeu} />
+      <Stack.Screen name="EditeazaProfil" component={EditeazaProfil} />
     </Stack.Navigator>
 
     return (

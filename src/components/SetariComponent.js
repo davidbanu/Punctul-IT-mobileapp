@@ -15,9 +15,9 @@ function SetariComponent() {
                 <Image style={styles.avatar} source={require('../assets/avatar.jpg')}/>
             </View>
             <View style={styles.innerSettingsContainer}>
-                <TouchableOpacity style={styles.contulMeuLabel}
-                onPress={()=> navigation.navigate('ContulMeu')}>
-                     <Text style={styles.labels}>Contul Meu </Text> 
+                <TouchableOpacity style={styles.editeazaProfilLabel}
+                onPress={()=> navigation.navigate('EditeazaProfil')}>
+                     <Text style={styles.labels}>Editează Profil </Text> 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.parolaLabel}>
                      <Text style={styles.labels}>Parolă</Text>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
 
-    contulMeuLabel: {
+    editeazaProfilLabel: {
         paddingBottom: 15,
         paddingLeft: 20, 
         paddingTop: 15,

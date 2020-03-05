@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, KeyboardAvoidingView, View} from 'react-native';
-import ContulMeuComponent from '../components/ContulMeuComponent';
+import EditeazaProfilComponent from '../components/EditeazaProfilComponent';
 
-export default class Home extends Component {
+export default class EditeazaProfil extends Component {
     render () {
         return (
             <KeyboardAvoidingView
@@ -11,7 +11,7 @@ export default class Home extends Component {
                 style={styles.container}>
                 <View style={styles.inner}>
                     <View style={styles.formContainer}>
-                        <ContulMeuComponent />
+                        <EditeazaProfilComponent />
                     </View>
                 </View>
             </KeyboardAvoidingView>
