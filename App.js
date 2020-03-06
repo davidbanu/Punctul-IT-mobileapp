@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
+import SplashScreen from 'react-native-splash-screen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -43,35 +44,40 @@ const Drawer = createDrawerNavigator();
 const MaterialBottomTabs = createMaterialBottomTabNavigator();
 const MaterialTopTabs = createMaterialTopTabNavigator();
 
-export default class App extends Component {
-  render() {
+function App () {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
-    createHomeStack = () =>
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Login" component={Login}  />
-      <Stack.Screen name="SignUp" component={SignUp} />
-      <Stack.Screen name="TrimiteEmail" component={TrimiteEmail} />
-      <Stack.Screen name="ResetPassword" component={ResetPassword} />
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Parola Schimbata" component={ParolaSchimbata} />
-      <Stack.Screen name="Plata" component={Plata} /> 
-      <Stack.Screen name="Catalog" component={Catalog} />
-      <Stack.Screen name="Membrii" component={Membrii} />
-      <Stack.Screen name="Setari" component={Setari} />
-      <Stack.Screen name="EditeazaProfil" component={EditeazaProfil} />
-      <Stack.Screen name="ParolaSetari" component={ParolaSetari} />
-      <Stack.Screen name="NotificariSetari" component={NotificariSetari} />
-    </Stack.Navigator>
+  createHomeStack = () =>
+  <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Screen name="Login" component={Login}  />
+    <Stack.Screen name="SignUp" component={SignUp} />
+    <Stack.Screen name="TrimiteEmail" component={TrimiteEmail} />
+    <Stack.Screen name="ResetPassword" component={ResetPassword} />
+    <Stack.Screen name="Home" component={Home} />
+    <Stack.Screen name="Parola Schimbata" component={ParolaSchimbata} />
+    <Stack.Screen name="Plata" component={Plata} /> 
+    <Stack.Screen name="Catalog" component={Catalog} />
+    <Stack.Screen name="Membrii" component={Membrii} />
+    <Stack.Screen name="Setari" component={Setari} />
+    <Stack.Screen name="EditeazaProfil" component={EditeazaProfil} />
+    <Stack.Screen name="ParolaSetari" component={ParolaSetari} />
+    <Stack.Screen name="NotificariSetari" component={NotificariSetari} />
+  </Stack.Navigator>
 
-    return (
-      <NavigationContainer>
-          <Drawer.Navigator>
-              <Drawer.Screen name="Login" children={createHomeStack} />
-              <Drawer.Screen name="Signup" component={SignUp} />
-              <Drawer.Screen name="Home"  component={Home} /> 
-              <Drawer.Screen name="Setari" component={Setari} />
-          </Drawer.Navigator>
-      </NavigationContainer>
-    );
-  }
+  return (
+    <NavigationContainer>
+        <Drawer.Navigator>
+            <Drawer.Screen name="Login" children={createHomeStack} />
+            <Drawer.Screen name="Signup" component={SignUp} />
+            <Drawer.Screen name="Home"  component={Home} /> 
+            <Drawer.Screen name="Setari" component={Setari} />
+        </Drawer.Navigator>
+    </NavigationContainer>
+  );
+
 }
+
+
+export default App;
