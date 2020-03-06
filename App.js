@@ -8,17 +8,6 @@ import {createMaterialBottomTabNavigator} from '@react-navigation/material-botto
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
 
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-  Text,
-  Dimensions,
-  Image as ReactImage,
-  StatusBar,
-  AppRegistry
-} from 'react-native';
-
 import Login from './src/containers/Login';
 import SignUp from './src/containers/SignUp';
 import TrimiteEmail from './src/containers/TrimiteEmail';
@@ -33,11 +22,6 @@ import EditeazaProfil from './src/containers/EditeazaProfil';
 import ParolaSetari from './src/containers/ParolaSetari';
 import NotificariSetari from './src/containers/NotificariSetari';
 
-import {
-  Header,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
