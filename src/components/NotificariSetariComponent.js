@@ -10,7 +10,7 @@ function  NotificariSetariComponent () {
             <View style={styles.inner}>
                 <StatusBar barStyle="light-content" />
                 <Text style={styles.title}>Notificări</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=> navigation.navigate('Notificari Push')}>
                     <Text style={styles.textLabel}>Notificări Push</Text> 
                 </TouchableOpacity> 
                 <TouchableOpacity>
