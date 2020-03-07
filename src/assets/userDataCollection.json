@@ -1,0 +1,97 @@
+{   
+    "_id": "5e5bec46f7f9b5098e293d91",
+    "birthDate": "07/06/1995",
+    "firstName": "Ana",
+    "lastName": "Antonov",
+    "accountType": "Student",
+    "telefon": "0727111414",
+    "email": "davidbanu@ymail.com",
+    "image": "../assets/avatar.jpg",
+    "bio": "",
+    "hash": "",
+    "salt": ""
+},
+
+{   
+    "_id": "5e5bec46f7f9b5098e293d91",
+    "birthDate": "07/06/1995",
+    "firstName": "Andrei",
+    "lastName": "Avram",
+    "accountType": "Student",
+    "telefon": "0727111414",
+    "email": "davidbanu@ymail.com",
+    "image": "../assets/avatar.jpg",
+    "bio": "",
+    "hash": "",
+    "salt": ""
+},
+
+{   
+    "_id": "5e5bec46f7f9b5098e293d91",
+    "birthDate": "07/06/1995",
+    "firstName": "Bogdan",
+    "lastName": "Bogdanescu",
+    "accountType": "Student",
+    "telefon": "0727111414",
+    "email": "davidbanu@ymail.com",
+    "image": "../assets/avatar.jpg",
+    "bio": "",
+    "hash": "",
+    "salt": ""
+},
+
+{   
+    "_id": "5e5bec46f7f9b5098e293d91",
+    "birthDate": "07/06/1995",
+    "firstName": "Mihai",
+    "lastName": "Dumitru",
+    "accountType": "Student",
+    "telefon": "0727111414",
+    "email": "davidbanu@ymail.com",
+    "image": "../assets/avatar.jpg",
+    "bio": "",
+    "hash": "",
+    "salt": ""
+},
+
+{   
+    "_id": "5e5bec46f7f9b5098e293d91",
+    "birthDate": "07/06/1995",
+    "firstName": "Oana",
+    "lastName": "Eremia",
+    "accountType": "Student",
+    "telefon": "0727111414",
+    "email": "davidbanu@ymail.com",
+    "image": "../assets/avatar.jpg",
+    "bio": "",
+    "hash": "",
+    "salt": ""
+},
+
+{   
+    "_id": "5e5bec46f7f9b5098e293d91",
+    "birthDate": "07/06/1995",
+    "firstName": "Radu",
+    "lastName": "Horia",
+    "accountType": "Student",
+    "telefon": "0727111414",
+    "email": "davidbanu@ymail.com",
+    "image": "../assets/avatar.jpg",
+    "bio": "",
+    "hash": "",
+    "salt": ""
+},
+
+{   
+    "_id": "5e5bec46f7f9b5098e293d91",
+    "birthDate": "07/06/1995",
+    "firstName": "Vlad",
+    "lastName": "Mihailescu",
+    "accountType": "Student",
+    "telefon": "0727111414",
+    "email": "davidbanu@ymail.com",
+    "image": "../assets/avatar.jpg",
+    "bio": "",
+    "hash": "",
+    "salt": ""
+}
