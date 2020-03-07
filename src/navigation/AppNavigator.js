@@ -5,7 +5,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
-import DrawerNavigator from './DrawerNavigator';
 import Login from '../containers/Login';
 import SignUp from '../containers/SignUp';
 import TrimiteEmail from '../containers/TrimiteEmail';
