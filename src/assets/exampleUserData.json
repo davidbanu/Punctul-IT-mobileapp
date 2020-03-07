@@ -1,7 +1,8 @@
 {   
     "_id": "5e5bec46f7f9b5098e293d91",
     "birthDate": "07/06/1995",
-    "username": "David",
+    "firstName": "David",
+    "lastName": "Banu",
     "accountType": "Admin",
     "telefon": "0727111414",
     "email": "davidbanu@ymail.com",
