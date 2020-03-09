@@ -22,6 +22,7 @@ import EditeazaProfil from './src/containers/EditeazaProfil';
 import ParolaSetari from './src/containers/ParolaSetari';
 import NotificariSetari from './src/containers/NotificariSetari';
 import NotificariPush from './src/containers/NotificariPush';
+import NotificariEmail from './src/containers/NotificariEmail';
 
 
 const Stack = createStackNavigator();
@@ -50,6 +51,7 @@ function App () {
     <Stack.Screen name="ParolaSetari" component={ParolaSetari} />
     <Stack.Screen name="NotificariSetari" component={NotificariSetari} />
     <Stack.Screen name="Notificari Push" component={NotificariPush} />
+    <Stack.Screen name="Notificari Email" component={NotificariEmail} />
   </Stack.Navigator>
 
   return (

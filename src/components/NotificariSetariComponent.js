@@ -13,7 +13,7 @@ function  NotificariSetariComponent () {
                 <TouchableOpacity onPress={()=> navigation.navigate('Notificari Push')}>
                     <Text style={styles.textLabel}>Notificări Push</Text> 
                 </TouchableOpacity> 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=> navigation.navigate('Notificari Email')}>
                     <Text style={styles.textLabel}>Notificări Email</Text> 
                 </TouchableOpacity>
             </View>
