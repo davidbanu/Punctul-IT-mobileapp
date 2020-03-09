@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import userData from '../assets/exampleUserData.json';
 
 export default class PlataComponent extends Component {
@@ -7,6 +8,7 @@ export default class PlataComponent extends Component {
             return (
                 <View style={styles.container}>
                     <StatusBar barStyle="light-content" />
+                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
                     <Text style={styles.title}>Plăți</Text>  
                 </View>
             )
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: 40,
+        marginTop: 10,
         marginLeft: 10,
         marginBottom: 40,
         fontSize: 38,
