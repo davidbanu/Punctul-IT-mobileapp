@@ -10,7 +10,9 @@ function  NotificariSetariComponent () {
         <View style={styles.container}>
             <View style={styles.inner}>
                 <StatusBar barStyle="light-content" />
-                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                </TouchableOpacity>
                 <Text style={styles.title}>Notificări</Text>
                 <TouchableOpacity onPress={()=> navigation.navigate('Notificari Push')}>
                     <Text style={styles.textLabel}>Notificări Push</Text> 
