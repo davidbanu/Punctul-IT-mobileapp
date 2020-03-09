@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Image} from 'react-native';
 import userData from '../assets/exampleUserData.json';
 import { useNavigation } from '@react-navigation/core';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 function SetariComponent() {
@@ -17,19 +17,31 @@ function SetariComponent() {
             <View style={styles.innerSettingsContainer}>
                 <TouchableOpacity style={styles.editeazaProfilLabel}
                 onPress={()=> navigation.navigate('EditeazaProfil')}>
-                     <Text style={styles.labels}>Editează Profil </Text> 
+                    <View style={styles.rows}>
+                        <Text style={styles.labels}>Editează Profil </Text> 
+                        <Icon name="ios-arrow-forward" size={30} color="#D3D3D3" />
+                    </View>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.editeazaNotificariLabel}
                 onPress={()=> navigation.navigate('NotificariSetari')}>
-                     <Text style={styles.labels}>Editează Notificări </Text> 
+                    <View style={styles.rows}>
+                        <Text style={styles.labels}>Editează Notificări </Text> 
+                        <Icon name="ios-arrow-forward" size={30} color="#D3D3D3" />
+                    </View>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.parolaLabel}
                 onPress={()=> navigation.navigate('ParolaSetari')}>
-                     <Text style={styles.labels}>Schimbă Parola</Text>
+                    <View style={styles.rows}>
+                        <Text style={styles.labels}>Schimbă Parola</Text>
+                        <Icon name="ios-arrow-forward" size={30} color="#D3D3D3" />
+                    </View> 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.signupLabel}
                 onPress={()=> navigation.navigate('SignUp')}>
-                     <Text style={styles.labels}>Creează Cont User</Text>
+                    <View style={styles.rows}>
+                        <Text style={styles.labels}>Creează Cont User</Text>
+                        <Icon name="ios-arrow-forward" size={30} color="#D3D3D3" />
+                    </View>                    
                 </TouchableOpacity>
             </View>
             <TouchableOpacity style={styles.buttonContainer} 
@@ -48,6 +60,10 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+
+    rows: {
+        flexDirection: 'row'
     },
 
     editeazaProfilLabel: {
@@ -107,11 +123,12 @@ const styles = StyleSheet.create({
     labels: {
         color: '#334856',
         fontSize: 18,
-        fontFamily: 'Muli-Regular'
+        fontFamily: 'Muli-Regular',
+        fontWeight: '600'
     },
 
     title: {
-        marginTop: 30,
+        marginTop: 20,
         textAlign: 'left',
         marginBottom: 10,
         fontSize: 38,
