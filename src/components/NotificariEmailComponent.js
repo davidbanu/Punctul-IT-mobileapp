@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Switch} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/core';
 import userData from '../assets/exampleUserData.json';
 
@@ -19,6 +20,7 @@ function  NotificariEmailComponent () {
         <View style={styles.container}>
             <View style={styles.inner}>
                 <StatusBar barStyle="light-content" />
+                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
                 <Text style={styles.title}>Notificări Email</Text>
                 <View style={styles.rows}>
                      <Text style={styles.textLabel}>Notificări Plăți</Text>
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: 40,
+        marginTop: 10,
         marginLeft: 10,
         marginBottom: 40,
         fontSize: 38,

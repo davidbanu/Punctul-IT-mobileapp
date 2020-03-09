@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
 import userData from '../assets/exampleUserData.json';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 function  NotificariSetariComponent () {
     const navigation = useNavigation();
@@ -9,6 +10,7 @@ function  NotificariSetariComponent () {
         <View style={styles.container}>
             <View style={styles.inner}>
                 <StatusBar barStyle="light-content" />
+                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
                 <Text style={styles.title}>Notificări</Text>
                 <TouchableOpacity onPress={()=> navigation.navigate('Notificari Push')}>
                     <Text style={styles.textLabel}>Notificări Push</Text> 
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: 40,
+        marginTop: 10,
         marginLeft: 10,
         marginBottom: 40,
         fontSize: 38,
