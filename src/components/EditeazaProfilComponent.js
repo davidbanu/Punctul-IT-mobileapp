@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Image} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import userData from '../assets/exampleUserData.json';
 import { useNavigation } from '@react-navigation/core';
 
@@ -10,6 +11,7 @@ function EditeazaProfilComponent() {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="light-content" />
+            <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
             <Text style={styles.title}>Editează Profil</Text>  
             <View style={styles.innerSettingsContainer}>
                 <TouchableOpacity style={styles.tipContLabel}>
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: 40,
+        marginTop: 10,
         textAlign: 'left',
         marginBottom: 10,
         fontSize: 38,
