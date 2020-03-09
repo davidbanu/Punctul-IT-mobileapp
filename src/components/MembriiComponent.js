@@ -10,7 +10,9 @@ function MembriiComponent () {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="light-content" />
-            <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+            </TouchableOpacity>
             <Text style={styles.title}>Membrii</Text>  
         </View>
     )
