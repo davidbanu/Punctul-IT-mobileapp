@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/core';
 import userData from '../assets/exampleUserData.json';
 
 function  NotificariEmailComponent () {
-
+    const navigation = useNavigation();
 
     let state = {
         notificariPlati: true,
@@ -20,7 +20,9 @@ function  NotificariEmailComponent () {
         <View style={styles.container}>
             <View style={styles.inner}>
                 <StatusBar barStyle="light-content" />
-                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                <TouchableOpacity onPress={() => navigation.goBack() }>
+                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                </TouchableOpacity>
                 <Text style={styles.title}>Notificări Email</Text>
                 <View style={styles.rows}>
                      <Text style={styles.textLabel}>Notificări Plăți</Text>
