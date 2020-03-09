@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Switch} from 'react-native';
-import {useNavigation} from '@react-navigation/core';
-import userData from '../assets/exampleUserData.json';
 
 function  NotificariPushComponent () {
-    const navigation = useNavigation();
+    
+    let state = {
+        notificariPlati: true,
+        notificariFeed: true,
+        notificariPrezente: true,
+        notificariMedalii: true, 
+        notificariStiri: true
+    }
     
     return (
         <View style={styles.container}>
