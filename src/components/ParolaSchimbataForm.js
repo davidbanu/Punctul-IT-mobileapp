@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, KeyboardAvoidingView} from 'react-native';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/core';
 
 
@@ -10,9 +10,10 @@ function ParolaSchimbataForm () {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="light-content" />
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+            </TouchableOpacity>
             <Text style={styles.title}>Parola ta a fost schimbată!</Text>
-
-
             <TouchableOpacity style={styles.buttonContainer}
             onPress={() => navigation.navigate('Login')}>
                 <Text style={styles.buttonText}>Conectează-te</Text>

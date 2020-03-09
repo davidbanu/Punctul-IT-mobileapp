@@ -8,7 +8,9 @@ function ResetPasswordForm () {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="light-content" />
-            <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+            </TouchableOpacity>
             <Text style={styles.title}>Resetează Parola</Text>
             <TextInput
              placeholder="Parolă"
