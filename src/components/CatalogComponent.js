@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
 import userData from '../assets/exampleUserData.json';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/core';
 
-export default class CatalogComponent extends Component {
-    render() {
-            return (
-                <View style={styles.container}>
-                    <StatusBar barStyle="light-content" />
+
+function CatalogComponent () {
+    const navigation = useNavigation();
+        return (
+            <View style={styles.container}>
+                <StatusBar barStyle="light-content" />
+                <TouchableOpacity onPress={() => navigation.goBack() }>
                     <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
-                    <Text style={styles.title}>Catalog</Text>  
-                </View>
-            )
-     }
+                </TouchableOpacity>
+                <Text style={styles.title}>Catalog</Text>  
+            </View>
+        )
 }
 
 const styles = StyleSheet.create({
@@ -52,3 +55,5 @@ const styles = StyleSheet.create({
         color: '#FFF'
     }
 })
+
+export default CatalogComponent;
