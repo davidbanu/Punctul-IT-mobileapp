@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, Switch} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/core';
+
 
 function  NotificariPushComponent () {
-    
+    const navigation = useNavigation();
+
     let state = {
         notificariPlati: true,
         notificariFeed: true,
@@ -16,7 +19,9 @@ function  NotificariPushComponent () {
         <View style={styles.container}>
             <View style={styles.inner}>
                 <StatusBar barStyle="light-content" />
-                <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                </TouchableOpacity>
                 <Text style={styles.title}>Notificări Push</Text>
                 <View style={styles.rows}>
                      <Text style={styles.textLabel}>Notificări Plăți</Text>
