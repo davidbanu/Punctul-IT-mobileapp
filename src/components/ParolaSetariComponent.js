@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
 import {useNavigation} from '@react-navigation/core';
+import Icon from 'react-native-vector-icons/Ionicons';
 import userData from '../assets/exampleUserData.json';
 
 function  ParolaSetariComponent () {
@@ -9,6 +10,9 @@ function  ParolaSetariComponent () {
         <View style={styles.container}>
             <View style={styles.inner}>
                 <StatusBar barStyle="light-content" />
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                </TouchableOpacity>
                 <Text style={styles.title}>Schimbă Parola</Text> 
                 <Text style={styles.textLabel}>Parola Curentă</Text> 
                 <TextInput
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: 40,
+        marginTop: 10,
         marginLeft: 10,
         marginBottom: 40,
         fontSize: 38,
