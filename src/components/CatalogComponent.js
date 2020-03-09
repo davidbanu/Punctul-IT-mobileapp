@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
 import userData from '../assets/exampleUserData.json';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class CatalogComponent extends Component {
     render() {
             return (
                 <View style={styles.container}>
                     <StatusBar barStyle="light-content" />
+                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
                     <Text style={styles.title}>Catalog</Text>  
                 </View>
             )
@@ -14,6 +16,10 @@ export default class CatalogComponent extends Component {
 }
 
 const styles = StyleSheet.create({
+    back: {
+
+    },
+
     container: {
         padding: 20,
         marginBottom: 20
@@ -37,7 +43,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: 40,
+        marginTop: 10,
         marginLeft: 10,
         marginBottom: 40,
         fontSize: 38,
