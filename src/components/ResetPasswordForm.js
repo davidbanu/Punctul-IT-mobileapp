@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar, KeyboardAvoidingView} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/core';
 
 function ResetPasswordForm () {
@@ -7,6 +8,7 @@ function ResetPasswordForm () {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="light-content" />
+            <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
             <Text style={styles.title}>Resetează Parola</Text>
             <TextInput
              placeholder="Parolă"

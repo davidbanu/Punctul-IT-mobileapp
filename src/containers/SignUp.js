@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import SignUpForm from '../components/SignUpForm';
+import Icon from 'react-native-vector-icons/Ionicons';
 import userData from '../assets/exampleUserData.json';
 
 
@@ -14,6 +15,7 @@ export default class SignUp extends Component {
                 keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
              style={styles.container}>
                 <View>
+                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
                     <Text style={styles.header} > Creează Cont </Text>
                     <View style={styles.formContainer}>
                         <SignUpForm />
@@ -33,13 +35,18 @@ const styles = StyleSheet.create({
     },
 
     header: {
-        marginTop: 40,
+        marginTop: 10,
         marginLeft: 10,
         marginBottom: 40,
         fontSize: 38,
         fontWeight: '500',
         fontFamily: 'Muli-Regular',
         color: '#FFF'
+    },
+
+    back: {
+        marginLeft: 10,
+        marginTop: 10
     }
 
 });
