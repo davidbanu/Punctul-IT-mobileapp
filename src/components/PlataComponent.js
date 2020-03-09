@@ -2,18 +2,22 @@ import React, { Component } from 'react';
 import  {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import userData from '../assets/exampleUserData.json';
+import { useNavigation } from '@react-navigation/core';
 
-export default class PlataComponent extends Component {
-    render() {
+
+function PlataComponent() {
+    const navigation = useNavigation();
+    
             return (
                 <View style={styles.container}>
                     <StatusBar barStyle="light-content" />
-                    <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <Icon name="ios-arrow-round-back" size={40} style={styles.back} color="#FFF" />
+                    </TouchableOpacity>
                     <Text style={styles.title}>Plăți</Text>  
                 </View>
             )
-     }
-}
+}    
 
 const styles = StyleSheet.create({
     container: {
@@ -48,3 +52,6 @@ const styles = StyleSheet.create({
         color: '#FFF'
     }
 })
+
+
+export default PlataComponent;
